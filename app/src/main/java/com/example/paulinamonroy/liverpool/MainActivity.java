@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 //Guarda Criterio
                 String search = editText.getText().toString();
-                if(!searches.contains(search)){
+                if(searches != null && !searches.contains(search)){
                     searches.add(search);
                     saveArrayList(searches, "List");
                     ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, searches);
